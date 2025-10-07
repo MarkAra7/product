@@ -28,6 +28,11 @@ class ProductController extends Controller
                 "description" => $request->description
             ]
         );
-        return redirect('/products');
+        return redirect('/products/' . $product->id . "/show");
+    }
+    public function show($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('products.show', ['product' => $product]);
     }
 }

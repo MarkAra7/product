@@ -13,4 +13,13 @@ class ProductController extends Controller
         $products = Product::all();
         return view('products.index', ['products' => $products]);
     }
+    public function create()
+    {
+        return view('products.create');
+    }
+    public function store(Request $request)
+    {
+
+        return $request;
+    }
 }

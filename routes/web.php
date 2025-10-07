@@ -12,3 +12,5 @@ Route::post('/products', [ProductController::class, 'store']);
 Route::get('/products/create', [ProductController::class, 'create']);
 Route::get('/products/{id}/show', [ProductController::class, 'show']);
 Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+Route::get('/products/{id}/edit', [ProductController::class, 'edit']);
+Route::put('/products/{id}/update', [ProductController::class, 'update']);

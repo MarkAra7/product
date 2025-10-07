@@ -7,3 +7,4 @@
 
     @endforeach
 </ul>
+<a href="/products/create">create New Products</a>

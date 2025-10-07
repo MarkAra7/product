@@ -35,4 +35,10 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         return view('products.show', ['product' => $product]);
     }
+    public function destroy($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+        return redirect('/products');
+    }
 }
